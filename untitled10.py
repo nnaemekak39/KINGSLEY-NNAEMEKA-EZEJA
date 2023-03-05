@@ -8,25 +8,6 @@ Created on Sat Mar  4 11:57:48 2023
 
 import pandas as pd
 import matplotlib.pyplot as plt
-
-def plot_gdp_capita('Years, countries_gdp'):
-for country, gdp_values in countries_gdp.items():
-plt.plot(years, gdp_values, label=country)      
-plt.figure()
-
-# Set x and y labels
-plt.xlabel('Year')
-plt.ylabel('GDP per capita USD')
-
-#Set title
-plt.title('GDP per capita[{} to {}]'.format(years[0], years[-1]))
-# Add legend
-plt.legend()
-# show the plot
-plt.show()
- 
- 
- 
 df_gdp = pd.read_csv('GDP_per_capita_table (4).csv')
 print(df_gdp)
 
@@ -42,7 +23,7 @@ poland = [13865, 15468, 15732, 15742, 17841]
 spain = [28170, 30365, 29554, 27056, 30116]
 
 
-# line graph with multiple lines
+#  graph with multiple lines
 plt.figure()
 
 # Add lines for each country
@@ -59,11 +40,11 @@ plt.ylabel('GDP per capita (USD)')
 plt.xlim()
 plt.title('GDP per capita[2017 to 2021]')
 
-# Add legend and show plot
+# Add legend
 plt.legend(loc='upper right')
 plt.show()
 
-# produce graphs using two other visualisation method
+#  visualisation methods.
 # Box plot
 
 data = {
